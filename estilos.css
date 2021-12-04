@@ -1,0 +1,22 @@
+#navigation {
+    background-color: aquamarine;
+    margin-bottom: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+.navigation li {
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.navigation li a {
+    display: inline-block;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    
+}
