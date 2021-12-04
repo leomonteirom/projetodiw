@@ -51,12 +51,13 @@ function repositorios(usuario) {
 
                 let div = document.createElement('div');
 
-                div.classList.add('col-md-3')
+                div.classList.add('col-md-6', 'col-lg-3')
 
                 div.innerHTML = (`
                     <p><strong>${repInfo[i].name}</strong></p>
                     <p>${repInfo[i].description}</p>
-                    <p><a href="${repInfo[i].html_url}">${repInfo[i].html_url}</a></p>
+                    <p>Link: <a href="${repInfo[i].html_url}">${repInfo[i].html_url}</a></p>
+                    <p>Criado em: ${repInfo[i].created_at}</p>
                 `);
 
                 ul.appendChild(div);
@@ -70,5 +71,5 @@ function repositorios(usuario) {
     request.send();
 }
 
-repositorios('thomas-crane')
-usuario('thomas-crane')
+repositorios('leomonteirom')
+usuario('leomonteirom')

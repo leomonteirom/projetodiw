@@ -7,6 +7,9 @@
 
 .navigation li {
     position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     list-style: none;
     text-decoration: none;
     padding: 0px;
@@ -14,9 +17,24 @@
 
 .navigation li a {
     display: inline-block;
-    justify-content: space-between;
     list-style: none;
     text-decoration: none;
     color: black;
-    
+    margin: 10px;
+}
+
+#imagem {
+    margin-top: 20px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#repositorios div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #d4b687;
+}
+
+#repositorios div p:first-of-type {
+    text-align: center;
 }
