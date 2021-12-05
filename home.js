@@ -11,7 +11,7 @@ function usuario(usuario) {
     request.onload = function() {
     
         const informacoes = JSON.parse(this.response);  
-        
+        console.log(informacoes)
         
 
         let img = document.getElementById('imagem');
@@ -24,7 +24,7 @@ function usuario(usuario) {
         info.innerHTML = (`
             <h1>${informacoes.name}</h1>
             <p>${informacoes.bio}</p>
-            <p>${informacoes.html_url}</p>
+            <p><a href="${informacoes.html_url}"</a>${informacoes.html_url}</p>
         `);
     }  
     request.send();
@@ -47,11 +47,12 @@ function repositorios(usuario) {
 
             if (i < 4) {
 
+
                 let ul = document.getElementById('repositorios');
 
                 let div = document.createElement('div');
 
-                div.classList.add('col-md-6', 'col-lg-3')
+                div.classList.add('col-md-4', 'col-lg-2')
 
                 div.innerHTML = (`
                     <p><strong>${repInfo[i].name}</strong></p>
@@ -63,13 +64,14 @@ function repositorios(usuario) {
                 ul.appendChild(div);
             }
 
-            /*teste*/
+            
 
         }
 
     }  
     request.send();
 }
+
 
 repositorios('leomonteirom')
 usuario('leomonteirom')

@@ -1,5 +1,13 @@
+html, body {
+    background-color: #e2ded0 !important;
+}
+
+#notoverflow {
+    overflow: visible;
+}
+
 #navigation {
-    background-color: aquamarine;
+    background-color: #746c70;
     margin-bottom: 0px;
     padding: 0px;
     padding-bottom: 10px;
@@ -17,10 +25,26 @@
 
 .navigation li a {
     display: inline-block;
+    justify-content: space-between;
     list-style: none;
     text-decoration: none;
     color: black;
-    margin: 10px;
+    font-weight: bold;
+    margin-top: 5px;    
+}
+
+.navigation #home {
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.navigation #pesquisar {
+    padding-top: 23px;
+    padding-right: 20px;
+}
+
+.navigation #gitHub {
+    padding-top: 23px;
 }
 
 #imagem {
@@ -29,12 +53,127 @@
     max-height: 400px;
 }
 
+#info {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+    padding-top: 30px;
+}
+
 #repositorios div {
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #d4b687;
+    background-color: #647c90;
+    border-radius: 20px;
 }
 
 #repositorios div p:first-of-type {
     text-align: center;
+}
+
+#footer {
+    background-color: #746c70;
+    height: 70px;
+    margin-bottom: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 120px;
+}
+
+#footer p {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #e2ded0;
+}
+
+#reps {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#botao {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#rePesq {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#rePesq div {
+    background-color: #647c90;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    #repositorios div p {
+        color: #e2ded0;
+    }
+
+    #repositorios div {
+        margin-left: 0px !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    #repositorios div {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        background-color: #647c90;
+    }
+
+    #repositorios div p {
+        color: #e2ded0;
+    }
+
+
+    #notoverflow {
+        overflow: auto !important;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    html, body {
+        overflow: hidden;
+    }
+
+    #repositorios div {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        background-color: #647c90;
+    }
+
+    #repositorios div p {
+        color: #e2ded0;
+    }
+
+    #notoverflow {
+        overflow: auto !important;
+    }
+
 }
